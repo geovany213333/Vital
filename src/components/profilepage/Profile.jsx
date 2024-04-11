@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Profile.css";
 import vital from "../../assets/vital.jpg"
+import { FavoritesContext } from "../../context/favoritesContext";
 
-export const Profile = () => {
+export function Profile ()  {
+  const {song} = useContext(FavoritesContext);
   return (
     <>
       <div className="container-fluid">
@@ -40,6 +42,7 @@ export const Profile = () => {
             <div className=" mt-3 border rounded">
               <h2>Favoritos</h2>
               <ul className="list-group">
+                <li className="list-group-item">{song} </li>
               </ul>
             </div>
           </div>

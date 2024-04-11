@@ -1,16 +1,8 @@
 import React, { useState } from "react";
 import "./NavBar.css";
-import SideBar from "./SideBar";
 import vital from "../../assets/vital.jpg"
 
 export function NavBar() {
-
-  const [isActive, setIsActive] = useState(false);
-  
-  const ShowHide = () =>{
-    setIsActive(!isActive);
-  }
-
 
   return (
     <>
@@ -41,13 +33,9 @@ export function NavBar() {
             </li>
           </ul>
           <div>
-            <button className="btn p-1" onClick={ShowHide}>
-              <img src="#" id="profileIco"/>
-            </button>
           </div>
         </div>
       </nav>
-      <SideBar open={isActive} close={ShowHide}/>
     </>
   );
 }

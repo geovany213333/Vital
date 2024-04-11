@@ -1,8 +1,8 @@
 export function MockFav (){
     const songs = [
         {name: "De Música Ligera",
-        artista: "Soda Estereo",
-        Género: "Rock en español"    
+        artist: "Soda Estereo",
+        genre: "Rock en español"    
     
     }
     ]
