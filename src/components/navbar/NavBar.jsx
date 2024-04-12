@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./NavBar.css";
 import vital from "../../assets/vital.jpg"
+import { NavLink } from "react-router-dom";
 
 export function NavBar() {
 
@@ -17,18 +18,14 @@ export function NavBar() {
           </div>
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a className="nav-link" data-bs-toggle="pill" href="#home">
-                Home
-              </a>
+              <NavLink to="/home" className={"nav-link"} data-bs-toggle={"pill"}><i className="fa-solid fa-house"></i></NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" data-bs-toggle="pill" href="#menu1">
-                Profile
-              </a>
+              <NavLink to="/profile" className={"nav-link"} data-bs-toggle={"pill"}><i className="fa-solid fa-user"></i></NavLink>
             </li>
             <li className="nav-item">
               <a className="nav-link" data-bs-toggle="pill" href="#menu2">
-                Search
+              <i className="fa-solid fa-magnifying-glass"></i>
               </a>
             </li>
           </ul>

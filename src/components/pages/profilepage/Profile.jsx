@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./Profile.css";
-import vital from "../../assets/vital.jpg"
-import { FavoritesContext } from "../../context/favoritesContext";
+import vital from "../../../assets/vital.jpg"
+import { FavoritesContext } from "../../../context/favoritesContext";
 
-export function Profile ()  {
+export const Profile = () =>  {
   const {song} = useContext(FavoritesContext);
   return (
     <>
