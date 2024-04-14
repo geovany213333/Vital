@@ -25,18 +25,18 @@ export function Search() {
     }
     setLoading(false);
   }
-
+  import.meta.env.VITE_URI_SPOTIFY
   async function getSong(cancion) {
-    let url = `https://spotify23.p.rapidapi.com/search/?q=${encodeURIComponent(
+    //console.log(import.meta.env.VITE_URI_SPOTIFY  )
+    let url =  import.meta.env.VITE_URI_SPOTIFY + `/search/?q=${encodeURIComponent(
       cancion
     )}&type=multi&offset=0&limit=30&numberOfTopResults=5`;
     try {
       let response = await fetch(url, {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
-            "d07e346c4emsh6bd6d4641050e1ep1de49ajsnb28201ea822a",
-          "X-RapidAPI-Host": "spotify23.p.rapidapi.com"
+          "X-RapidAPI-Key": import.meta.env.VITE_API_KEY_SPOTIFY,
+          "X-RapidAPI-Host": import.meta.env.VITE_HOST_SPOTIFY
         }
       });
       if (!response.ok) {
