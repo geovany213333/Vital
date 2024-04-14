@@ -1,8 +1,8 @@
+
 import { NavBar } from "./components/navbar";
-import { Profile } from "./components/pages";
+import { Profile, Home, Search, Login } from "./components/pages"; // Asumiendo que tienes estos componentes exportados correctamente
 import { FavoritesSongs } from "./context/favoritesContext";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-import { Home } from "./components/pages";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -11,9 +11,11 @@ function App() {
         <div className="App">
           <NavBar />
           <Routes>
-            <Route path="/profile" element={<Profile />}/>
-            <Route path="/home" element={<Home />}/>
-            <Route path="*" element={<Profile/>}/>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="*" element={<Profile />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
       </FavoritesSongs>
@@ -22,3 +24,4 @@ function App() {
 }
 
 export default App;
+
